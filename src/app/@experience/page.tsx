@@ -35,14 +35,14 @@ const experiences = [
 
 const page = () => {
 
-  useIntersectionObserver('timeline-item')
+  useIntersectionObserver({ className: 'timeline-item', classIn: 'fade-in-up', classOut: 'fade-in-out' });
 
   return (
-    <Section id="experience" className="h-screen flex flex-col items-center p-12">
+    <Section id="experience" className="min-h-screen flex flex-col items-center  md:p-12">
       <h2 className="text-3xl font-semibold text-center">My Experience</h2>
       <ol className="relative border-gray-300">
           {experiences.map((exp, index) => (
-            <li key={index} className="timeline-item opacity-0 translate-y-10 transition-all duration-700 ease-out mb-10 ml-6">
+            <li key={index} className="timeline-item translate-y-10 transition-all duration-700 ease-out mb-10 ml-6">
               <article className="p-6 shadow-md rounded-lg">
                 <time className="text-sm text-gray-500">{exp.duration}</time>
                 <h3 className="text-lg font-semibold">{exp.role}</h3>

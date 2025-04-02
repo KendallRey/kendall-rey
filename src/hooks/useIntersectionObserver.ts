@@ -2,32 +2,52 @@
 
 import { useEffect } from 'react'
 
+type ArgProps = {
+  className: string;
+  classIn?: string;
+  classOut?: string;
+}
+
 type Options = {
-  delay?: number; // Base delay in milliseconds (default: 240ms)
+  delay?: number; 
 };
 
-export const useIntersectionObserver = (className: string, options?: Options) => {
+export const useIntersectionObserver = (args: ArgProps, options?: Options) => {
 
-  const delay = options?.delay || 240; // Default delay of 240ms
+  const { className, classIn, classOut } = args ?? {};
+  const delay = options?.delay || 240;
 
   useEffect(() => {
+
+    const observerIn = createObserver(classIn, classOut, true, 0.7);
+    const observerOut = createObserver(classOut, classIn, false, 0.9);
+
+    document.querySelectorAll(`.${className}`).forEach((item) => {
+      observerIn?.observe(item);
+      observerOut?.observe(item);
+    })
+
+    return () => {
+      observerIn?.disconnect()
+      observerOut?.disconnect()
+    };
+  },[])
+
+  const createObserver = (addClass: string | null | undefined, removeClass: string | null | undefined, isIntersecting: boolean, threshold: number = 0.2) => {
+    if(!addClass) return null;
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
-        if(entry.isIntersecting){
+        if(isIntersecting ? entry.isIntersecting : !entry.isIntersecting){
           setTimeout(() => {
-            entry.target.classList.add("fade-in-up");
-          }, index * delay); // Staggered delay per item
+            if(addClass) entry.target.classList.add(addClass);
+            if(removeClass) entry.target.classList.remove(removeClass);
+          }, index * delay);
         }
       })
     }, {
-      threshold: 0.2
+      threshold
     })
 
-    document.querySelectorAll(`.${className}`).forEach((item) => {
-      observer.observe(item);
-    })
-
-    return () => observer.disconnect();
-  },[])
-
+    return observer;
+  }
 }

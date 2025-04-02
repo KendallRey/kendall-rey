@@ -26,10 +26,10 @@ const projects = [
 
 const page = () => {
 
-  useIntersectionObserver("project-card", { delay: 300 });
+  useIntersectionObserver({ className: "project-card", classIn: 'fade-in-up', classOut: 'fade-in-out' }, { delay: 300 });
 
   return (
-    <Section id="projects" className="h-screen flex flex-col bg-gray-900 text-white  p-12">
+    <Section id="projects" className="min-h-screen flex flex-col bg-gray-900 text-white  md:p-12">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-4xl font-semibold text-center mb-12">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -39,7 +39,7 @@ const page = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card opacity-0 translate-y-10 transition-all duration-700 ease-out bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
+              className="project-card translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
             >
               <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-4">
