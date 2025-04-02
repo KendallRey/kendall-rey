@@ -36,10 +36,11 @@ const experiences = [
 const page = () => {
 
   useIntersectionObserver({ className: 'timeline-item', classIn: 'fade-in-up', classOut: 'fade-out-down' });
+  useIntersectionObserver({ className: "section-title", classIn: 'fade-in-left', classOut: 'fade-out-right' });
 
   return (
     <Section id="experience" className="min-h-screen flex flex-col items-center  md:p-12">
-      <h2 className="text-3xl font-semibold text-center">My Experience</h2>
+      <h2 className="section-title text-3xl transition-all duration-700 font-semibold text-center">My Experience</h2>
       <ol className="relative border-gray-300">
           {experiences.map((exp, index) => (
             <li key={index} className="timeline-item translate-y-10 transition-all duration-700 ease-out mb-10 ml-6">

@@ -27,11 +27,12 @@ const projects = [
 const page = () => {
 
   useIntersectionObserver({ className: "project-card", classIn: 'fade-in-up', classOut: 'fade-out-down' }, { delay: 300 });
+  useIntersectionObserver({ className: "section-title", classIn: 'fade-in-left', classOut: 'fade-out-right' });
 
   return (
     <Section id="projects" className="min-h-screen flex flex-col bg-gray-900 text-white  md:p-12">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center mb-12">Projects</h2>
+        <h2 className="section-title text-4xl font-semibold text-center transition-all duration-700 mb-12">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <a
