@@ -20,7 +20,7 @@ export const useIntersectionObserver = (args: ArgProps, options?: Options) => {
   useEffect(() => {
 
     const observerIn = createObserver(classIn, classOut, true, 0.7);
-    const observerOut = createObserver(classOut, classIn, false, 0.9);
+    const observerOut = createObserver(classOut, classIn, false, 0.4);
 
     document.querySelectorAll(`.${className}`).forEach((item) => {
       observerIn?.observe(item);
