@@ -2,7 +2,7 @@
   opacity: 1;
 }
 
-.fade-in-out {
+.fade-out-down {
   transform: translateY(-20px);
   opacity: 0;
 }

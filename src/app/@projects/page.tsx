@@ -26,7 +26,7 @@ const projects = [
 
 const page = () => {
 
-  useIntersectionObserver({ className: "project-card", classIn: 'fade-in-up', classOut: 'fade-in-out' }, { delay: 300 });
+  useIntersectionObserver({ className: "project-card", classIn: 'fade-in-up', classOut: 'fade-out-down' }, { delay: 300 });
 
   return (
     <Section id="projects" className="min-h-screen flex flex-col bg-gray-900 text-white  md:p-12">

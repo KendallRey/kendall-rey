@@ -35,7 +35,7 @@ const experiences = [
 
 const page = () => {
 
-  useIntersectionObserver({ className: 'timeline-item', classIn: 'fade-in-up', classOut: 'fade-in-out' });
+  useIntersectionObserver({ className: 'timeline-item', classIn: 'fade-in-up', classOut: 'fade-out-down' });
 
   return (
     <Section id="experience" className="min-h-screen flex flex-col items-center  md:p-12">
