@@ -1,38 +1,54 @@
-"use client";
+'use client';
 
-import { Section } from "@/components";
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { Section } from '@/components';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const projects = [
   {
-    title: "Project One",
-    description: "A placeholder project description. This project focuses on UI/UX.",
-    link: "#",
-    image: "https://via.placeholder.com/600x400",
+    title: 'Project One',
+    description:
+      'A placeholder project description. This project focuses on UI/UX.',
+    link: '#',
+    image: 'https://via.placeholder.com/600x400',
   },
   {
-    title: "Project Two",
-    description: "Another project about front-end development and animations.",
-    link: "#",
-    image: "https://via.placeholder.com/600x400",
+    title: 'Project Two',
+    description: 'Another project about front-end development and animations.',
+    link: '#',
+    image: 'https://via.placeholder.com/600x400',
   },
   {
-    title: "Project Three",
-    description: "A mobile app project built with React Native and Expo.",
-    link: "#",
-    image: "https://via.placeholder.com/600x400",
+    title: 'Project Three',
+    description: 'A mobile app project built with React Native and Expo.',
+    link: '#',
+    image: 'https://via.placeholder.com/600x400',
   },
 ];
 
 const page = () => {
-
-  useIntersectionObserver({ className: "project-card", classIn: 'fade-in-up', classOut: 'fade-out-down' }, { delay: 300 });
-  useIntersectionObserver({ className: "section-title", classIn: 'fade-in-left', classOut: 'fade-out-right' });
+  useIntersectionObserver(
+    {
+      className: 'project-card',
+      classIn: 'fade-in-up',
+      classOut: 'fade-out-down',
+    },
+    { delay: 300 },
+  );
+  useIntersectionObserver({
+    className: 'section-title',
+    classIn: 'fade-in-left',
+    classOut: 'fade-out-right',
+  });
 
   return (
-    <Section id="projects" className="min-h-screen flex flex-col bg-gray-900 text-white  md:p-12">
+    <Section
+      id="projects"
+      className="min-h-screen flex flex-col bg-gray-900 text-white  md:p-12"
+    >
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="section-title text-4xl font-semibold text-center transition-all duration-700 mb-12">Projects</h2>
+        <h2 className="section-title text-4xl font-semibold text-center transition-all duration-700 mb-12">
+          Projects
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <a
@@ -42,7 +58,11 @@ const page = () => {
               rel="noopener noreferrer"
               className="project-card translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
             >
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-48 object-cover"
+              />
               <div className="p-4">
                 <h3 className="text-xl font-bold">{project.title}</h3>
                 <p className="text-gray-400">{project.description}</p>
@@ -53,6 +73,6 @@ const page = () => {
       </div>
     </Section>
   );
-}
+};
 
 export default page;
