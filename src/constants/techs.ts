@@ -1,12 +1,16 @@
 export const TECH = {
   AXIOS: { className: 'text-[#671ddf] border-[#671ddf]', name: 'Axios' },
   BLENDER_3D: {
-    className: 'text-[#e87d0d] border-[#265787] bg-[#ffffff]',
+    className: 'text-[#e87d0d] border-[#265787]',
     name: 'Blender 3D',
   },
   BOOTSTRAP: {
     className: 'text-[#6f2cf3] border-[#6f2cf3]',
     name: 'Bootstrap CSS',
+  },
+  DART: {
+    className: 'text-[#14a6c4] border-[#14a6c4]',
+    name: 'Dart',
   },
   DJANGO: {
     className: 'text-[#ffffff] border-[#ffffff] bg-[#092e20]',
@@ -15,6 +19,10 @@ export const TECH = {
   DRIZZLE: {
     className: 'text-[#c5f74f] border-[#c5f74f]',
     name: 'Drizzle ORM',
+  },
+  FLUTTER: {
+    className: 'text-[#2675d8] border-[#2675d8]',
+    name: 'Flutter',
   },
   GITHUB: {
     className: 'text-[#f0f6fc] border-[#f0f6fc] bg-[#010409]',
