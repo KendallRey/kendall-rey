@@ -82,7 +82,7 @@ const page = () => {
       id="projects"
       className="min-h-screen flex flex-col bg-gray-900 text-white md:p-12"
     >
-      <div className="max-w-6xl mx-auto px-6 py-12 md:py-0">
+      <div className="max-w-6xl mx-auto px-6 py-12 md:pt-0">
         <h2 className="section-title text-4xl font-semibold text-center transition-all duration-700 mb-12">
           Projects
         </h2>
