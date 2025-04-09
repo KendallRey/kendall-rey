@@ -1,5 +1,9 @@
 export const TECH = {
   AXIOS: { className: 'text-[#671ddf] border-[#671ddf]', name: 'Axios' },
+  BLENDER_3D: {
+    className: 'text-[#e87d0d] border-[#265787] bg-[#ffffff]',
+    name: 'Blender 3D',
+  },
   BOOTSTRAP: {
     className: 'text-[#6f2cf3] border-[#6f2cf3]',
     name: 'Bootstrap CSS',
@@ -29,6 +33,10 @@ export const TECH = {
     className: 'text-[#007fff] border-[#007fff]',
     name: 'Material UI',
   },
+  NEXTJS: {
+    className: 'text-[#ffffff] border-[#ffffff]',
+    name: 'NextJS',
+  },
   NPM: {
     className: 'text-[#cd3e3d] border-[#cd3e3d]',
     name: 'npm',
@@ -51,6 +59,10 @@ export const TECH = {
   TAILWIND: {
     className: 'text-[#00bcff] border-[#00bcff]',
     name: 'Tailwind CSS',
+  },
+  THREE_JS: {
+    className: 'text-[#000000] border-[#000000] bg-[#ffffff]',
+    name: 'three.js',
   },
   TYPESCRIPT: {
     className: 'text-[#3178c6] border-[#3178c6]',
