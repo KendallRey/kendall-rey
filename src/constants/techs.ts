@@ -1,9 +1,4 @@
-type TechType = {
-  name: string;
-  className: string;
-};
-
-export const TECH: Record<string, TechType> = {
+export const TECH = {
   AXIOS: { className: 'text-[#671ddf] border-[#671ddf]', name: 'Axios' },
   BOOTSTRAP: {
     className: 'text-[#6f2cf3] border-[#6f2cf3]',
@@ -52,7 +47,7 @@ export const TECH: Record<string, TechType> = {
     name: 'Redux Toolkit',
   },
   SASS: { className: 'text-[#ce679a] border-[#ce679a]', name: 'SASS' },
-  SUPABASE: { className: 'text-[#3ecd8d] border-[#3ecd8d]', name: 'SASS' },
+  SUPABASE: { className: 'text-[#3ecd8d] border-[#3ecd8d]', name: 'Supabase' },
   TAILWIND: {
     className: 'text-[#00bcff] border-[#00bcff]',
     name: 'Tailwind CSS',
