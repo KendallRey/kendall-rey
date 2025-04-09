@@ -28,6 +28,10 @@ export const TECH = {
     className: 'text-[#f0f6fc] border-[#f0f6fc] bg-[#010409]',
     name: 'Github',
   },
+  GO: {
+    className: 'text-[#007d9c] border-[#007d9c]',
+    name: 'Go',
+  },
   GOOGLE_FIREBASE: {
     className: 'text-[#ff9408] border-[#ff9408]',
     name: 'Firebase',
@@ -40,6 +44,10 @@ export const TECH = {
   MATERIAL_UI: {
     className: 'text-[#007fff] border-[#007fff]',
     name: 'Material UI',
+  },
+  NESTJS: {
+    className: 'text-[#ea2845] border-[#ea2845]',
+    name: 'NestJS',
   },
   NEXTJS: {
     className: 'text-[#ffffff] border-[#ffffff]',
