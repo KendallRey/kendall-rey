@@ -34,6 +34,10 @@ export const TECH: Record<string, TechType> = {
     className: 'text-[#007fff] border-[#007fff]',
     name: 'Material UI',
   },
+  NPM: {
+    className: 'text-[#cd3e3d] border-[#cd3e3d]',
+    name: 'npm',
+  },
   POSTGRESQL: {
     className: 'text-[#336791] border-[#336791]',
     name: 'PostgreSQL',
