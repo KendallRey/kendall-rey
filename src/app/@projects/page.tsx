@@ -51,6 +51,15 @@ const projects = [
     ],
     type: PROJECT_TYPE.LEARNING,
   },
+  {
+    title: 'QR Scanner',
+    description:
+      'A Flutter app built with Dart for fast and reliable QR code scanning.',
+    link: 'https://github.com/KendallRey/qr-scanner-flutter',
+    image: '/qr-scanner-flutter.png',
+    techs: [TECH.FLUTTER, TECH.DART],
+    type: PROJECT_TYPE.LEARNING,
+  },
 ];
 
 const page = () => {
@@ -107,7 +116,7 @@ const page = () => {
               <div className="relative mt-4 p-4 border-t border-gray-700 flex flex-col gap-1">
                 {project.type && (
                   <Chip
-                    className={`${project.type.className} absolute right-[16px] top-[-16px]`}
+                    className={`${project.type.className} absolute right-[16px] top-[-16px] z-10`}
                   >
                     {project.type.name}
                   </Chip>
