@@ -61,6 +61,10 @@ export const TECH: Record<string, TechType> = {
     className: 'text-[#3178c6] border-[#3178c6]',
     name: 'Typescript',
   },
+  VERCEL: {
+    className: 'text-[#ffffff] border-[#ffffff] bg-[#000000]',
+    name: 'Vercel',
+  },
   VITE: { className: 'text-[#9499ff] border-[#9499ff]', name: 'Vite' },
   VSCODE: { className: 'text-[#24aef5] border-[#24aef5]', name: 'VS Code' },
   ZOD: { className: 'text-[#42b983] border-[#42b983]', name: 'Zod' },
