@@ -60,6 +60,14 @@ const projects = [
     techs: [TECH.FLUTTER, TECH.DART],
     type: PROJECT_TYPE.LEARNING,
   },
+  {
+    title: 'NestJS Backend Template',
+    description: 'Studying backend service with queueing via redis.',
+    link: 'https://github.com/KendallRey/NestJS-BullMQ',
+    image: '/nestjs-bullmq.png',
+    techs: [TECH.NESTJS],
+    type: PROJECT_TYPE.LEARNING,
+  },
 ];
 
 const page = () => {
