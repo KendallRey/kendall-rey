@@ -1,6 +1,7 @@
 'use client';
 
 import { Chip, Section } from '@/components';
+import { WeirdTypeHover } from '@/components/custom/WeirdTypeHover';
 import { PROJECT_TYPE } from '@/constants/enums';
 import { TECH } from '@/constants/techs';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
@@ -144,6 +145,10 @@ const page = () => {
               </div>
             </Link>
           ))}
+          <div className="project-card flex flex-col justify-center items-center translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl">
+            <h3 className="text-xl font-bold">More Coming</h3>
+            <p className="text-gray-400">Just finalizing ideas.</p>
+          </div>
         </div>
       </div>
     </Section>
