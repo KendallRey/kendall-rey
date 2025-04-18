@@ -5,10 +5,12 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 type WeirdTypeHoverProps = {
   text: string;
   hoverText: string;
+  el: React.HTMLElementType;
+  className?: string;
 };
 
 export const WeirdTypeHover: React.FC<WeirdTypeHoverProps> = (props) => {
-  const { text, hoverText } = props;
+  const { text, hoverText, el: Element, className } = props;
   const maxLen = useMemo(
     () => Math.max(text.length + 1, hoverText.length + 1),
     [text, hoverText],
@@ -41,11 +43,12 @@ export const WeirdTypeHover: React.FC<WeirdTypeHoverProps> = (props) => {
   }, [_text.current, _hoverText.current, currentIndex]);
 
   return (
-    <div
+    <Element
       onPointerEnter={() => setHover(true)}
       onPointerOut={() => setHover(false)}
+      className={className}
     >
       {_displayText}
-    </div>
+    </Element>
   );
 };
