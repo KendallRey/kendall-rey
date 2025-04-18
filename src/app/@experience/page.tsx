@@ -54,7 +54,7 @@ const experiences = [
   },
 ];
 
-const page = () => {
+const ExperiencePage = () => {
   useIntersectionObserver({
     className: 'timeline-item',
     classIn: 'fade-in-up',
@@ -111,4 +111,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ExperiencePage;

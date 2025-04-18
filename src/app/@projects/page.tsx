@@ -71,7 +71,7 @@ const projects = [
   },
 ];
 
-const page = () => {
+const ProjectsPage = () => {
   useIntersectionObserver(
     {
       className: 'project-card',
@@ -160,4 +160,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProjectsPage;
