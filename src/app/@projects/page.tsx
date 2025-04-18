@@ -145,9 +145,14 @@ const page = () => {
               </div>
             </Link>
           ))}
-          <div className="project-card flex flex-col justify-center items-center translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl">
+          <div className="project-card min-h-[320px] flex flex-col justify-center items-center translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl">
             <h3 className="text-xl font-bold">More Coming</h3>
-            <p className="text-gray-400">Just finalizing ideas.</p>
+            <WeirdTypeHover
+              text="Just finalizing ideas."
+              hoverText="(definitely not procrastinating)"
+              el="p"
+              className="text-gray-400"
+            />
           </div>
         </div>
       </div>
