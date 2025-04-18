@@ -1,0 +1,17 @@
+.fade-in-up {
+  opacity: 1;
+}
+
+.fade-out-down {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.fade-in-left {
+  opacity: 1;
+}
+
+.fade-out-right {
+  transform: translateX(-20px);
+  opacity: 0;
+}
