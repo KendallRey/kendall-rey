@@ -92,7 +92,7 @@ const ProjectsPage = () => {
       className="min-h-screen flex flex-col bg-gray-900 text-white md:p-12"
     >
       <div className="max-w-6xl mx-auto px-6 py-12 md:pt-0">
-        <h2 className="section-title text-4xl font-semibold text-center transition-all duration-700 mb-12">
+        <h2 className="section-title fade-out-right text-4xl font-semibold text-center transition-all duration-700 mb-12">
           Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -102,7 +102,7 @@ const ProjectsPage = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
+              className="project-card fade-out-down translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
             >
               <div className="w-full h-48 flex items-center relative">
                 <Image

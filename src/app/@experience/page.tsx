@@ -76,14 +76,14 @@ const ExperiencePage = () => {
       id="experience"
       className="min-h-screen flex flex-col items-center  md:p-12"
     >
-      <h2 className="section-title text-3xl transition-all duration-700 font-semibold text-center">
+      <h2 className="section-title fade-out-right text-3xl transition-all duration-700 font-semibold text-center">
         My Experience
       </h2>
       <ol className="relative border-gray-300">
         {experiences.map((exp, index) => (
           <li
             key={index}
-            className="timeline-item transition-all duration-700 ease-out mb-10 ml-6"
+            className="timeline-item fade-out-down transition-all duration-700 ease-out mb-10 ml-6"
           >
             <article className="p-6 shadow-md rounded-lg flex flex-col gap-2">
               <time className="text-sm text-gray-500">{exp.duration}</time>
@@ -97,7 +97,7 @@ const ExperiencePage = () => {
                 {exp.techs?.map((tech) => (
                   <Chip
                     key={tech.name}
-                    className={`tech-chip transition-all duration-700 ${tech.className || ''}`}
+                    className={`tech-chip fade-out-right transition-all duration-700 ${tech.className || ''}`}
                   >
                     {tech.name}
                   </Chip>
