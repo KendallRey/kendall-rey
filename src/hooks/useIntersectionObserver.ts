@@ -17,7 +17,7 @@ export const useIntersectionObserver = (args: ArgProps, options?: Options) => {
   const delay = options?.delay || 240;
 
   useEffect(() => {
-    const observerIn = createObserver(classIn, classOut, true, 1);
+    const observerIn = createObserver(classIn, classOut, true, 0.5);
 
     document.querySelectorAll(`.${className}`).forEach((item) => {
       observerIn?.observe(item);
