@@ -78,7 +78,7 @@ const ProjectsPage = () => {
       classIn: 'fade-in-up',
       classOut: 'fade-out-down',
     },
-    { delay: 300 },
+    { delay: 450 },
   );
   useIntersectionObserver({
     className: 'section-title',
@@ -102,7 +102,7 @@ const ProjectsPage = () => {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card fade-out-down translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl"
+              className="project-card fade-out-down translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.05] hover:shadow-xl"
             >
               <div className="w-full h-48 flex items-center relative">
                 <Image
@@ -145,7 +145,7 @@ const ProjectsPage = () => {
               </div>
             </Link>
           ))}
-          <div className="project-card min-h-[320px] flex flex-col justify-center items-center translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.02] hover:shadow-xl">
+          <div className="project-card fade-out-down min-h-[320px] flex flex-col justify-center items-center translate-y-10 transition-all duration-700 bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:scale-[1.05] hover:shadow-xl">
             <h3 className="text-xl font-bold">More Coming</h3>
             <WeirdTypeHover
               text="Just finalizing ideas."
