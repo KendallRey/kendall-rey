@@ -17,17 +17,14 @@ export const useIntersectionObserver = (args: ArgProps, options?: Options) => {
   const delay = options?.delay || 240;
 
   useEffect(() => {
-    const observerIn = createObserver(classIn, classOut, true, 0.7);
-    const observerOut = createObserver(classOut, classIn, false, 0.4);
+    const observerIn = createObserver(classIn, classOut, true, 1);
 
     document.querySelectorAll(`.${className}`).forEach((item) => {
       observerIn?.observe(item);
-      observerOut?.observe(item);
     });
 
     return () => {
       observerIn?.disconnect();
-      observerOut?.disconnect();
     };
   }, []);
 
