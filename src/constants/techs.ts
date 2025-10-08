@@ -8,6 +8,10 @@ export const TECH = {
     className: 'text-[#6f2cf3] border-[#6f2cf3]',
     name: 'Bootstrap CSS',
   },
+  SHADCN_UI: {
+    className: 'text-[#EDEDED] border-[#27272A] bg-[#09090B]',
+    name: 'Shadcn UI',
+  },
   DART: {
     className: 'text-[#14a6c4] border-[#14a6c4]',
     name: 'Dart',
@@ -28,6 +32,10 @@ export const TECH = {
     className: 'text-[#f0f6fc] border-[#f0f6fc] bg-[#010409]',
     name: 'Github',
   },
+  DOCKER_COMPOSE: {
+    className: 'text-[#2496ED] border-[#2496ED]',
+    name: 'Docker Compose',
+  },
   GO: {
     className: 'text-[#007d9c] border-[#007d9c]',
     name: 'Go',
@@ -44,6 +52,10 @@ export const TECH = {
   MATERIAL_UI: {
     className: 'text-[#007fff] border-[#007fff]',
     name: 'Material UI',
+  },
+  ANT_DESIGN: {
+    className: 'text-[#1890ff] border-[#1890ff]',
+    name: 'Ant Design',
   },
   NESTJS: {
     className: 'text-[#ea2845] border-[#ea2845]',
@@ -69,6 +81,10 @@ export const TECH = {
   REDUX: {
     className: 'text-[#593d88] border-[#593d88]',
     name: 'Redux Toolkit',
+  },
+  ZUSTAND: {
+    className: 'text-[#764ABC] border-[#764ABC]',
+    name: 'Zustand',
   },
   SASS: { className: 'text-[#ce679a] border-[#ce679a]', name: 'SASS' },
   SUPABASE: { className: 'text-[#3ecd8d] border-[#3ecd8d]', name: 'Supabase' },
