@@ -7,10 +7,39 @@ import React from 'react';
 
 const experiences = [
   {
-    role: 'Mid-Level Front End Developer',
-    company: 'Your Company Name',
-    duration: 'January 2023 - Present',
+    role: 'Software Developer',
+    company: 'Serve Diagnostica Inc.',
+    company_link: 'https://servegroup.asia/',
+    duration: 'June 2025 - September 2025',
     details: [
+      'Started development of ID System for recording patient / member personal information, relatives, emergency contacts, etc. Including RFID function for seamless searching and identification.',
+      'Provide assistance to clients for support and fix from current Laboratory Information System issues.',
+      'Computer servicing tasks, including reformatting PCs, troubleshooting hardware/software issues, and assisting colleagues with computer-related problems.',
+    ],
+    techs: [
+      TECH.TYPESCRIPT,
+      TECH.JAVASCRIPT,
+      TECH.REACT,
+      TECH.TAILWIND,
+      TECH.ANT_DESIGN,
+      TECH.SHADCN_UI,
+      TECH.GITHUB,
+      TECH.ZUSTAND,
+      TECH.POSTGRESQL,
+      TECH.ZOD,
+      TECH.DJANGO,
+      TECH.DOCKER_COMPOSE,
+    ],
+  },
+  {
+    role: 'Front End Developer',
+    company: 'Pro-Solutions Technology, Co.',
+    company_link: 'https://www.pro-solutions.technology/',
+    duration: 'June 2022 - June 2025',
+    details: [
+      'Enhanced the Learning Management System with patches and a new implementation.',
+      'Initiated development of an Accounting Management System to streamline student fee processing.',
+      'Collaborated in sprint planning and retrospectives to improve team efficiency.',
       'Developed and maintained front-end applications, ensuring seamless integration with back-end APIs, including online payments.',
       'Led UI redesigns for the Canteen Management System, collaborating with UI/UX designers.',
       'Built and deployed the School Management System web app.',
@@ -22,6 +51,7 @@ const experiences = [
       TECH.TYPESCRIPT,
       TECH.JAVASCRIPT,
       TECH.REACT,
+      TECH.BOOTSTRAP,
       TECH.MATERIAL_UI,
       TECH.TAILWIND,
       TECH.JIRA,
@@ -32,24 +62,6 @@ const experiences = [
       TECH.ZOD,
       TECH.DJANGO,
       TECH.REACT_NATIVE,
-    ],
-  },
-  {
-    role: 'Junior Front End Developer',
-    company: 'Your Company Name',
-    duration: 'June 2022 - December 2022',
-    details: [
-      'Enhanced the Learning Management System with patches and a new implementation.',
-      'Initiated development of an Accounting Management System to streamline student fee processing.',
-      'Collaborated in sprint planning and retrospectives to improve team efficiency.',
-    ],
-    techs: [
-      TECH.TYPESCRIPT,
-      TECH.JAVASCRIPT,
-      TECH.REACT,
-      TECH.BOOTSTRAP,
-      TECH.JIRA,
-      TECH.GITHUB,
     ],
   },
 ];
@@ -87,7 +99,16 @@ const ExperiencePage = () => {
           >
             <article className="p-6 shadow-md rounded-lg flex flex-col gap-2">
               <time className="text-sm text-gray-500">{exp.duration}</time>
-              <h3 className="text-lg font-semibold">{exp.role}</h3>
+              <span>
+                <a
+                  href={exp.company_link}
+                  target="_blank"
+                  className="text-lg font-semibold text-blue-400 hover:text-blue-600 hover:underline transition-all"
+                >
+                  {exp.company}
+                </a>
+              </span>
+              <h3 className="text-md font-semibold">{exp.role}</h3>
               <ul className="list-disc ml-5 mt-2 text-gray-400">
                 {exp.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
